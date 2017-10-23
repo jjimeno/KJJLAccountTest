@@ -1,0 +1,26 @@
+ext {
+    androidCompileSdkVersion = 26
+    androidBuildToolsVersion = "26.0.2"
+    supportVersion = '26.1.0'
+    supportName = "com.android.support"
+
+    asyncLib = [
+            mainLib = "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.19.2",
+            uiLib = "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.19.2"
+    ]
+
+    unitTestLibName = "junit"
+    unitTestLibs = [
+            mainLib = "${unitTestLibName}:junit:4.12"
+    ]
+
+    supportLibs = [
+            appcompatv7 = "${supportName}:appcompat-v7:${supportVersion}",
+            recyclerViewV7 = "${supportName}:recyclerview-v7:${supportVersion}"
+
+    ]
+
+    jsonLib = [
+            json = 'com.google.code.gson:gson:2.8.2'
+    ]
+}

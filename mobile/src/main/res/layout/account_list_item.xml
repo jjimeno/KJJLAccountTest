@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/tvAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_list_item_number"
+        app:layout_constraintStart_toStartOf="@+id/tvAccountIban"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAccountNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvAccountIbanValue"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="237236423" />
+
+    <TextView
+        android:id="@+id/tvAccountIban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_list_item_iban"
+        app:layout_constraintStart_toStartOf="@+id/tvAccountName"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountNumber" />
+
+    <TextView
+        android:id="@+id/tvAccountIbanValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvAccountNameValue"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountNumberValue"
+        tools:text="234 234 342 34 " />
+
+    <TextView
+        android:id="@+id/tvAccountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_list_item_name"
+        app:layout_constraintStart_toStartOf="@+id/tvAccountBalance"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountIban" />
+
+    <TextView
+        android:id="@+id/tvAccountNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tvAccountBalanceValue"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountIbanValue"
+        tools:text="account A" />
+
+    <TextView
+        android:id="@+id/tvAccountBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_list_item_balance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountName"
+         />
+
+    <TextView
+        android:id="@+id/tvAccountBalanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountNameValue"
+        tools:text="1.000" />
+
+</android.support.constraint.ConstraintLayout>

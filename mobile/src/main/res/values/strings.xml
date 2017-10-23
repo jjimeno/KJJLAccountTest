@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">JJLAccountTestAndroid</string>
+
+    <string name="HOME_LIST_DEFAULT_SEARCH">All accounts</string>
+    <string name="HOME_LIST_VISIBLE_SEARCH">Only visible accounts</string>
+
+    <string name="account_list_item_name">Name:</string>
+    <string name="account_list_item_balance">Balance:</string>
+    <string name="account_list_item_iban">IBAN:</string>
+    <string name="account_list_item_number">Account Number:</string>
+</resources>
