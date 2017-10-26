@@ -23,4 +23,18 @@ ext {
     jsonLib = [
             json = 'com.google.code.gson:gson:2.8.2'
     ]
+
+    rendererLib = [
+            mainLib = 'com.github.pedrovgs:renderers:3.3.3'
+    ]
+
+    mainWearableLib = [
+            supporLib =  'com.google.android.support:wearable:2.0.5',
+    ]
+    wearableLibs = [
+            supportLib = mainWearableLib,
+            playServicesLib = 'com.google.android.gms:play-services-wearable:11.4.2',
+            supportWear = "${supportName}:wear:${supportVersion}",
+            support = "${supportName}:support-v4:${supportVersion}"
+    ]
 }

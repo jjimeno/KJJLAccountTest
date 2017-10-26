@@ -1,4 +1,4 @@
-package com.jjl.jjlaccounttestandroid.view
+package view
 
 import android.support.annotation.LayoutRes
 import android.view.LayoutInflater

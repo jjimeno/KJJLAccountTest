@@ -1,6 +1,5 @@
-package com.jjl.jjlaccounttestandroid.view.accountList
+package com.jjl.jjlaccounttestandroid.accountList
 
-import android.support.v7.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.jjl.accounttest.domain.data.datasource.DefaultAccountDatasource
 import com.jjl.accounttest.domain.data.repository.DefaultAccountRepository
@@ -11,13 +10,18 @@ import com.jjl.accounttest.domain.view.accountList.AccountListContract
 import com.jjl.accounttest.domain.view.accountList.AccountListPresenter
 import com.jjl.jjlaccounttest.nativelibs.AndroidFileProvider
 import com.jjl.jjlaccounttestandroid.R
-import com.jjl.jjlaccounttestandroid.view.BaseActivity
+import com.jjl.jjlaccounttestandroid.WearBaseActivity
 import com.pedrogomez.renderers.ListAdapteeCollection
-import com.pedrogomez.renderers.RVRendererAdapter
+import com.pedrogomez.renderers.RendererAdapter
 import com.pedrogomez.renderers.RendererBuilder
 import kotlinx.android.synthetic.main.activity_account_list.*
 
-abstract class AccountListActivity : BaseActivity<AccountListContract.AccountListView, AccountListContract.AccountListPresenter>(), AccountListContract.AccountListView {
+/**
+ * Created by jjimeno on 25/10/17.
+ */
+
+
+abstract class AccountListActivity : WearBaseActivity<AccountListContract.AccountListView, AccountListContract.AccountListPresenter>(), AccountListContract.AccountListView {
 
     abstract fun provideUseCase(): GetAccounts
 
@@ -27,11 +31,6 @@ abstract class AccountListActivity : BaseActivity<AccountListContract.AccountLis
 
     override fun providePresenter(): AccountListContract.AccountListPresenter {
         return AccountListPresenter(this, provideUseCase())
-    }
-
-    override fun configureViews() {
-        super.configureViews()
-        recyclerview.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 
     // View
@@ -44,7 +43,7 @@ abstract class AccountListActivity : BaseActivity<AccountListContract.AccountLis
     override fun drawAccounts(accounts: List<Account>) {
         val renderer = AccountRenderer()
         val rendererBuilder = RendererBuilder(renderer)
-        recyclerview.adapter = RVRendererAdapter(rendererBuilder, ListAdapteeCollection(accounts))
+        listview.adapter = RendererAdapter(rendererBuilder, ListAdapteeCollection(accounts))
 
     }
 }

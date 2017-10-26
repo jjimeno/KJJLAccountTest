@@ -1,12 +1,14 @@
-package com.jjl.jjlaccounttestandroid.view.accountList
+package com.jjl.jjlaccounttestandroid.accountList
 
 import com.jjl.accounttest.domain.model.Account
 import com.jjl.jjlaccounttestandroid.R
 import kotlinx.android.synthetic.main.account_list_item.view.*
 import view.BaseRenderer
 
+import kotlinx.android.synthetic.main.account_list_item.*
+
 /**
- * Created by jjimeno on 23/10/17.
+ * Created by jjimeno on 25/10/17.
  */
 class AccountRenderer : BaseRenderer<Account>() {
     override fun getContentView(): Int {
