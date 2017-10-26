@@ -24,10 +24,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.google.android.support:wearable:2.0.5'
-    implementation 'com.google.android.gms:play-services-wearable:11.4.2'
-    implementation 'com.android.support:percent:26.1.0'
-    implementation 'com.android.support:support-v4:26.1.0'
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation wearableLibs
+    compileOnly mainWearableLib
+    implementation rendererLib
+    implementation project(':nativelibs')
+    implementation project(':domain')
 }

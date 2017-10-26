@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">JJLAccountTestAndroid</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="HOME_LIST_DEFAULT_SEARCH">All accounts</string>
+    <string name="HOME_LIST_VISIBLE_SEARCH">Only visible accounts</string>
+
+    <string name="account_list_item_name">Name:</string>
+    <string name="account_list_item_balance">Balance:</string>
+    <string name="account_list_item_iban">IBAN:</string>
+    <string name="account_list_item_number">Account Number:</string>
+    <string name="title_activity_accountlist_activity">accountlist_activity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
 </resources>

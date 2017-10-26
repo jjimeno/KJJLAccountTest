@@ -35,6 +35,5 @@ dependencies {
     wearApp project(':wear')
     implementation project(':nativelibs')
     implementation project(':domain')
-    implementation 'com.google.android.gms:play-services-wearable:+'
-    implementation 'com.github.pedrovgs:renderers:3.3.3'
+    implementation rendererLib
 }
